@@ -3,21 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kanuya · La rencontre sérieuse, 100 % guinéenne</title>
-<meta name="description" content="L'application de rencontre 100 % guinéenne, pour ceux qui cherchent du sérieux. Ton numéro reste privé, un inconnu ne peut pas t'écrire gratuitement.">
+<title>Kanuya · L'application de rencontre 100 % guinéenne</title>
+<meta name="description" content="L'application de rencontre 100 % guinéenne, pour ceux qui cherchent du sérieux. Ton numéro n'apparaît jamais, un inconnu ne peut pas t'écrire gratuitement.">
 <link rel="icon" href="assets/favicon.png">
-<meta property="og:title" content="Kanuya · La rencontre sérieuse, 100 % guinéenne">
-<meta property="og:description" content="L'application de rencontre 100 % guinéenne, pour ceux qui cherchent du sérieux.">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="canonical" href="https://0xabdoulaye.github.io/kanuya/">
+<meta property="og:title" content="Kanuya · L'application de rencontre 100 % guinéenne">
+<meta property="og:description" content="Pour ceux qui cherchent du sérieux. Conakry, Guinée.">
 <meta property="og:image" content="https://0xabdoulaye.github.io/kanuya/assets/og.jpg">
 <meta property="og:url" content="https://0xabdoulaye.github.io/kanuya/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light">
 <meta name="theme-color" content="#4B164C">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Lora:ital,wght@1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Lora:ital,wght@0,500;1,500;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<link rel="canonical" href="https://0xabdoulaye.github.io/kanuya/">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -33,143 +36,243 @@
   "author": { "@type": "Organization", "name": "Kanuya", "areaServed": "GN" }
 }
 </script>
-
 </head>
-<body>
 
-<div class="filet"></div>
+<!-- Un seul mot à changer le jour de la publication : « avant » devient
+     « apres », et les badges des stores remplacent le bloc WhatsApp. -->
+<body data-etat="avant">
 
-<header class="tete">
-  <span class="mot">Kanuya</span>
-  <span class="lieu">Conakry, Guinée</span>
+<header class="entete">
+  <div class="rangee">
+    <a class="marque" href="#accueil">
+      <img src="assets/icon.png" alt="" width="34" height="34">
+      <span>Kanuya</span>
+    </a>
+    <div class="droite">
+      <a class="pilule" href="#telecharger">Télécharger</a>
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav id="menu" hidden>
+    <a href="#pourquoi">Pourquoi Kanuya</a>
+    <a href="#securite">Sécurité</a>
+    <a href="#etapes">Comment ça marche</a>
+    <a href="#pieces">Les pièces</a>
+    <a href="#faq">Questions</a>
+  </nav>
 </header>
 
-<main>
+<section id="accueil" class="accueil">
+  <div class="accueil-grille">
 
-  <section class="accueil">
-    <h1>L'application de rencontre 100&nbsp;% guinéenne, pour ceux qui cherchent du sérieux.</h1>
-
-    <!-- Deux états (2b). Tant que l'app n'est pas publiée, « Bientôt » n'est
-         pas un bouton : rien ne clique dans le vide. -->
-    <div class="boutons">
-      <a class="action" href="https://wa.me/224622814991?text=Pr%C3%A9viens-moi%20quand%20Kanuya%20sort">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.6-1.2A9 9 0 1 0 12 3Z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>
-          <path d="M8.5 9.5c.3 2.8 3.2 5.7 6 6l1.4-1.4-2.2-1.4-1.1.7c-.9-.5-1.6-1.2-2-2l.7-1.1-1.4-2.2L8.5 9.5Z" fill="#fff"/>
-        </svg>
-        Préviens-moi sur WhatsApp
-      </a>
-      <p class="bientot"><span>Google Play</span><span class="etiquette">Bientôt</span></p>
-      <p class="bientot"><span>iPhone</span><span class="etiquette">Bientôt</span></p>
+    <div class="accroche">
+      <h1>Kanuya</h1>
+      <p class="phrase">L'application de rencontre 100&nbsp;% guinéenne, pour ceux qui cherchent du sérieux.</p>
     </div>
 
-    <figure class="capture grande">
-      <div class="cadre" role="img" aria-label="L'écran Découvrir de Kanuya"></div>
-      <figcaption>L'écran Découvrir, tel quel.</figcaption>
-    </figure>
-  </section>
+    <div class="telephone-cadre">
+      <div class="telephone">
+        <div class="ecran">
+          <div class="photo"><span>photo de profil</span></div>
+          <div class="fiche">
+            <div class="nom">
+              <span class="prenom">Aïssatou, 26</span>
+              <span class="verifiee">vérifiée</span>
+            </div>
+            <div class="lieu">Ratoma, Conakry</div>
+            <div class="etiquettes">
+              <span>Mariage</span><span>Soussou</span><span>Français</span>
+            </div>
+            <div class="gestes">
+              <span class="nope">
+                <svg width="16" height="16" viewBox="0 0 16 16" stroke="#b09ab2" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                  <line x1="3" y1="3" x2="13" y2="13"/><line x1="13" y1="3" x2="3" y2="13"/>
+                </svg>
+              </span>
+              <span class="like">
+                <svg width="18" height="18" viewBox="0 0 18 17" aria-hidden="true">
+                  <path d="M9 17C3 12 0 8 0 5C0 2 2 0 4.5 0C6.5 0 8 1 9 3C10 1 11.5 0 13.5 0C16 0 18 2 18 5C18 8 15 12 9 17Z" fill="#FBF8FB"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <section class="bloc">
-    <p class="chapeau">Pourquoi Kanuya</p>
-    <div class="argument">
-      <h2>Faite ici.</h2>
-      <p>Codée en Guinée, pensée pour la Guinée. Les quartiers de Conakry, les langues qu'on parle vraiment, les intentions qu'on assume.</p>
-    </div>
-    <div class="argument">
-      <h2>Pour du sérieux.</h2>
-      <p>On dit ce qu'on cherche dès l'inscription, et c'est le premier filtre des autres.</p>
-    </div>
-    <div class="argument">
-      <h2>Tranquille.</h2>
-      <p>Un inconnu ne peut pas t'écrire gratuitement.</p>
-    </div>
-  </section>
+    <div id="telecharger" class="telecharger">
+        <div class="avant">
+          <a class="bouton-clair" href="https://wa.me/224622814991?text=Pr%C3%A9viens-moi%20quand%20Kanuya%20sort%20sur%20Google%20Play.">Préviens-moi de la sortie, sur WhatsApp</a>
+          <div class="bientot">
+            <span class="store">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="opacity:.55">
+                <path d="M3.6 1.9 13.5 12 3.6 22.1c-.37-.3-.6-.77-.6-1.32V3.22c0-.55.23-1.02.6-1.32z" fill="#4285F4"/>
+                <path d="M17 8.6 5.3 1.6c-.55-.33-1.2-.27-1.7.3L13.5 12 17 8.6z" fill="#34A853"/>
+                <path d="M17 15.4 20.5 13.3c.9-.54.9-2.06 0-2.6L17 8.6 13.5 12l3.5 3.4z" fill="#FBBC04"/>
+                <path d="M3.6 22.1c.5.57 1.15.63 1.7.3L17 15.4 13.5 12 3.6 22.1z" fill="#EA4335"/>
+              </svg>
+              <span class="pile"><small>BIENTÔT SUR</small><b>Google Play</b></span>
+            </span>
+            <span class="store">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="rgba(251,248,251,0.6)" aria-hidden="true">
+                <path d="M17.05 12.54c-.03-2.87 2.35-4.25 2.45-4.32-1.34-1.95-3.41-2.22-4.14-2.25-1.76-.18-3.44 1.04-4.33 1.04-.89 0-2.27-1.02-3.74-.99-1.92.03-3.7 1.12-4.69 2.84-2 3.47-.51 8.6 1.44 11.42.95 1.38 2.08 2.93 3.57 2.87 1.43-.06 1.97-.92 3.7-.92s2.22.92 3.73.89c1.54-.03 2.52-1.4 3.46-2.79 1.09-1.6 1.54-3.15 1.56-3.23-.03-.01-2.99-1.15-3.01-4.56z"/>
+                <path d="M14.22 4.1c.79-.95 1.32-2.28 1.17-3.6-1.13.05-2.5.76-3.31 1.71-.73.84-1.37 2.19-1.2 3.48 1.26.1 2.55-.64 3.34-1.59z"/>
+              </svg>
+              <span class="pile"><small>BIENTÔT SUR</small><b>iPhone</b></span>
+            </span>
+          </div>
+        </div>
 
-  <!-- Le seul bloc sombre de la page. C'est la section qui décide : si elle
-       est ratée, personne ne télécharge. -->
-  <section class="sombre">
-    <p class="chapeau">Ta tranquillité d'abord</p>
-    <div class="argument">
-      <h2>Ton numéro n'apparaît jamais.</h2>
-      <p>Il sert aux paiements, personne d'autre ne le voit.</p>
-    </div>
-    <div class="argument">
-      <h2>Un inconnu ne peut pas t'écrire gratuitement.</h2>
-      <p>Sans match des deux côtés, il faut payer. Fini les cent messages par jour.</p>
-    </div>
-    <div class="argument">
-      <h2>Vérification par selfie.</h2>
-      <p>Un badge que personne ne peut fabriquer.</p>
-    </div>
-    <div class="argument">
-      <h2>Bloquer et signaler, à tout moment.</h2>
-      <p>Et la personne bloquée ne le sait pas.</p>
-    </div>
-  </section>
+        <div class="apres">
+          <a class="badge" href="#">
+            <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3.6 1.9 13.5 12 3.6 22.1c-.37-.3-.6-.77-.6-1.32V3.22c0-.55.23-1.02.6-1.32z" fill="#4285F4"/>
+              <path d="M17 8.6 5.3 1.6c-.55-.33-1.2-.27-1.7.3L13.5 12 17 8.6z" fill="#34A853"/>
+              <path d="M17 15.4 20.5 13.3c.9-.54.9-2.06 0-2.6L17 8.6 13.5 12l3.5 3.4z" fill="#FBBC04"/>
+              <path d="M3.6 22.1c.5.57 1.15.63 1.7.3L17 15.4 13.5 12 3.6 22.1z" fill="#EA4335"/>
+            </svg>
+            <span class="pile"><small>DISPONIBLE SUR</small><b>Google Play</b></span>
+          </a>
+          <a class="badge" href="#">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="#FBF8FB" aria-hidden="true">
+              <path d="M17.05 12.54c-.03-2.87 2.35-4.25 2.45-4.32-1.34-1.95-3.41-2.22-4.14-2.25-1.76-.18-3.44 1.04-4.33 1.04-.89 0-2.27-1.02-3.74-.99-1.92.03-3.7 1.12-4.69 2.84-2 3.47-.51 8.6 1.44 11.42.95 1.38 2.08 2.93 3.57 2.87 1.43-.06 1.97-.92 3.7-.92s2.22.92 3.73.89c1.54-.03 2.52-1.4 3.46-2.79 1.09-1.6 1.54-3.15 1.56-3.23-.03-.01-2.99-1.15-3.01-4.56z"/>
+              <path d="M14.22 4.1c.79-.95 1.32-2.28 1.17-3.6-1.13.05-2.5.76-3.31 1.71-.73.84-1.37 2.19-1.2 3.48 1.26.1 2.55-.64 3.34-1.59z"/>
+            </svg>
+            <span class="pile"><small>TÉLÉCHARGER SUR</small><b>App Store</b></span>
+          </a>
+        </div>
+      </div>
 
-  <section class="bloc">
-    <p class="chapeau">Comment ça marche</p>
-    <ol class="etapes">
-      <li><span class="num">01</span><div class="vignette"></div><p>Tu crées ton profil, honnêtement</p></li>
-      <li><span class="num">02</span><div class="vignette"></div><p>Tu découvres des gens près de toi</p></li>
-      <li><span class="num">03</span><div class="vignette"></div><p>Vous vous plaisez, vous discutez</p></li>
-      <li><span class="num">04</span><div class="vignette"></div><p>Par écrit ou de vive voix, comme tu préfères</p></li>
-    </ol>
-  </section>
+  </div>
+</section>
 
-  <section class="bloc">
-    <p class="chapeau">Les pièces, sans mystère</p>
-    <p class="intro">Kanuya vit des pièces, pas de la publicité. Elles servent à écrire à quelqu'un sans match, ou à voir qui a regardé ton profil.</p>
-    <dl class="tableau">
-      <div><dt>À l'inscription</dt><dd>200 offertes</dd></div>
-      <div><dt>Série quotidienne</dt><dd>chaque jour</dd></div>
-      <div><dt>Parrainage</dt><dd>100 chacun</dd></div>
-      <div><dt>Pour en acheter</dt><dd>Orange Money, MTN MoMo</dd></div>
-    </dl>
+<section id="pourquoi" class="section">
+  <div class="etroit">
+    <h2>Pourquoi Kanuya, et pas une autre</h2>
+    <div class="liste-numerotee">
+      <div><span class="chiffre">1</span><p><strong>Faite ici.</strong> Codée en Guinée, pensée pour la Guinée. Les quartiers de Conakry, les langues qu'on parle vraiment, les intentions qu'on assume.</p></div>
+      <div><span class="chiffre">2</span><p><strong>Pour du sérieux.</strong> On dit ce qu'on cherche dès l'inscription, et c'est le premier filtre des autres.</p></div>
+      <div><span class="chiffre">3</span><p><strong>Tranquille.</strong> Un inconnu ne peut pas t'écrire gratuitement.</p></div>
+    </div>
+    <p class="citation">« Kanuya » veut dire l'amour, l'affection, en maninka.</p>
+  </div>
+</section>
+
+<section id="securite" class="securite">
+  <div class="etroit">
+    <h2>Ici, tu restes maîtresse de la situation</h2>
+    <p class="sous-titre">Quatre règles, écrites dans le code de l'application. Pas des promesses.</p>
+    <div class="grille-securite">
+      <div>
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#DD88CF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="20" cy="20" r="13"/><line x1="10" y1="30" x2="30" y2="10"/></svg>
+        <p><strong>Ton numéro n'apparaît jamais.</strong><br><span>Il sert aux paiements, personne d'autre ne le voit.</span></p>
+      </div>
+      <div>
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#DD88CF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="15" cy="20" r="9"/><circle cx="25" cy="20" r="9"/></svg>
+        <p><strong>Un inconnu ne peut pas t'écrire gratuitement.</strong><br><span>Sans match des deux côtés, il faut payer. Fini les cent messages par jour.</span></p>
+      </div>
+      <div>
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#DD88CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="7" width="22" height="26" rx="5"/><polyline points="15 20 19 24 26 15"/></svg>
+        <p><strong>Vérification par selfie.</strong><br><span>Un badge que personne ne peut fabriquer.</span></p>
+      </div>
+      <div>
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#DD88CF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="20" cy="20" r="13"/><line x1="13" y1="20" x2="27" y2="20"/></svg>
+        <p><strong>Bloquer et signaler, à tout moment.</strong><br><span>Et la personne bloquée ne le sait pas.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="etapes" class="section">
+  <div class="etroit">
+    <h2>Comment ça marche</h2>
+    <div class="grille-etapes">
+      <div><div class="capture"><span>capture : création du profil</span></div><p><span class="chiffre">1</span>&nbsp; Tu crées ton profil, honnêtement</p></div>
+      <div><div class="capture"><span>capture : découverte</span></div><p><span class="chiffre">2</span>&nbsp; Tu découvres des gens près de toi</p></div>
+      <div><div class="capture"><span>capture : conversation</span></div><p><span class="chiffre">3</span>&nbsp; Vous vous plaisez, vous discutez</p></div>
+      <div><div class="capture"><span>capture : note vocale</span></div><p><span class="chiffre">4</span>&nbsp; Par écrit ou de vive voix, comme tu préfères</p></div>
+    </div>
+    <p class="apres-grille">La note vocale, c'est pour ceux qui préfèrent parler plutôt qu'écrire. Ici, ça compte.</p>
+  </div>
+</section>
+
+<section id="pieces" class="section-pieces">
+  <div class="carte">
+    <h2>Les pièces, expliquées simplement</h2>
+    <p class="sous">Kanuya gagne sa vie avec des pièces, pas avec tes données. Autant le dire clairement.</p>
+    <div class="puces">
+      <div><span class="point"></span><p>200 pièces offertes à l'inscription</p></div>
+      <div><span class="point"></span><p>Une série quotidienne qui en rapporte</p></div>
+      <div><span class="point"></span><p>Le parrainage : 100 pièces chacun</p></div>
+      <div><span class="point"></span><p>Et si on veut plus : Orange Money ou MTN MoMo</p></div>
+    </div>
+    <p class="usage">Elles servent à écrire à quelqu'un sans match, ou à voir qui a regardé ton profil.</p>
     <p class="appui">Pas d'abonnement, pas de prélèvement automatique.</p>
-  </section>
+  </div>
+</section>
 
-  <section class="bloc">
-    <p class="chapeau">Questions fréquentes</p>
+<section id="faq" class="section-faq">
+  <div class="etroit">
+    <h2>Les questions qu'on nous pose</h2>
     <div class="faq">
       <details>
         <summary>C'est gratuit ?</summary>
-        <p>Oui. L'inscription, les profils, les matchs et les conversations entre personnes qui se sont plu ne coûtent rien. Les pièces servent seulement à écrire à quelqu'un sans match et à voir qui a regardé ton profil.</p>
+        <p>Oui pour commencer : 200 pièces sont offertes à l'inscription, et la série quotidienne en rapporte d'autres. Acheter des pièces est optionnel, sans abonnement.</p>
       </details>
       <details>
         <summary>Est-ce que mon numéro est visible ?</summary>
-        <p>Non, jamais. Il sert à créer ton compte et aux paiements. Aucun membre ne peut le voir.</p>
+        <p>Non, jamais. Il sert uniquement aux paiements Orange Money ou MTN MoMo. Personne ne le voit sur l'application.</p>
       </details>
       <details>
         <summary>Comment je supprime mon compte ?</summary>
-        <p>Dans Réglages, puis Supprimer mon compte. Aucune justification à donner. Ton profil disparaît tout de suite et tu as quatorze jours pour changer d'avis : il suffit de te reconnecter.</p>
+        <p>Dans les réglages de l'application : Compte, puis Supprimer mon compte. Tout est effacé, photos comprises.</p>
       </details>
       <details>
         <summary>Il faut avoir quel âge ?</summary>
-        <p>18 ans. La date de naissance est demandée à l'inscription, vérifiée par le serveur, et ne peut plus être modifiée ensuite.</p>
+        <p>18 ans, et c'est vérifié à l'inscription.</p>
       </details>
       <details>
         <summary>Ça marche sans internet ?</summary>
-        <p>Les messages déjà reçus restent lisibles, et ce que tu écris hors connexion part tout seul dès que le réseau revient. Découvrir a besoin d'une connexion.</p>
+        <p>Non, il faut une connexion. L'application est conçue pour rester légère et consommer peu de data.</p>
       </details>
       <details>
         <summary>Comment je signale quelqu'un ?</summary>
-        <p>Depuis son profil, ou en appuyant longuement sur un message. Tu choisis le motif, et la personne signalée n'en sait rien.</p>
+        <p>Depuis son profil ou la conversation : Signaler. Tu peux aussi bloquer, et la personne bloquée ne le sait pas.</p>
       </details>
     </div>
-  </section>
+  </div>
+</section>
 
-</main>
-
-<footer class="bas">
-  <p><i>Kanuya</i> veut dire « l'amour, l'affection » en maninka.</p>
-  <nav>
-    <a href="confidentialite.html">Politique de confidentialité</a>
-    <a href="conditions.html">Conditions d'utilisation</a>
-    <a href="https://wa.me/224622814991">Nous écrire sur WhatsApp</a>
-  </nav>
-  <p class="copy">© 2026 Kanuya · Conakry, Guinée</p>
+<footer class="pied">
+  <div class="etroit">
+    <div class="marque-pied">
+      <img src="assets/icon.png" alt="" width="30" height="30">
+      <span>Kanuya</span>
+    </div>
+    <nav>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="conditions.html">Conditions d'utilisation</a>
+      <a href="https://wa.me/224622814991">Contact WhatsApp</a>
+    </nav>
+    <p>Kanuya, application de rencontre guinéenne. Conakry, Guinée.</p>
+  </div>
 </footer>
+
+<script>
+  // Le menu, et rien d'autre. Pas de framework sur une page qui doit
+  // s'ouvrir en 3G.
+  var b = document.querySelector('.burger'), m = document.getElementById('menu');
+  b.addEventListener('click', function () {
+    var ouvert = m.hasAttribute('hidden');
+    if (ouvert) { m.removeAttribute('hidden'); } else { m.setAttribute('hidden', ''); }
+    b.setAttribute('aria-expanded', ouvert ? 'true' : 'false');
+  });
+  m.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') { m.setAttribute('hidden', ''); b.setAttribute('aria-expanded', 'false'); }
+  });
+</script>
 
 </body>
 </html>
