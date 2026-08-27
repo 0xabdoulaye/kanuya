@@ -152,40 +152,14 @@ body[data-etat="apres"] .avant { display: none; }
 /* le téléphone, penché */
 .telephone-cadre { flex: 0 0 auto; transform: rotate(-6deg); margin: 4px 10px 8px; }
 .telephone {
-  width: min(250px, 68vw); aspect-ratio: 25 / 52;
+  width: min(250px, 68vw);
   background: var(--nuit); border-radius: 36px; padding: 10px;
   box-shadow: 24px 32px 60px rgba(30, 20, 32, .4);
 }
 .ecran {
-  width: 100%; height: 100%; background: var(--fond); border-radius: 28px;
-  overflow: hidden; display: flex; flex-direction: column;
+  display: block; width: 100%; height: auto;
+  border-radius: 28px; background: var(--fond);
 }
-.photo {
-  height: 58%;
-  background: repeating-linear-gradient(45deg, #E9D6E9 0 12px, #F3E7F3 12px 24px);
-  display: flex; align-items: center; justify-content: center;
-}
-.photo span {
-  font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--prune-clair);
-  background: rgba(251, 248, 251, .85); padding: 4px 8px; border-radius: 6px;
-}
-.fiche { padding: 16px 16px 0; flex: 1; color: var(--texte); }
-.nom { display: flex; align-items: center; gap: 8px; }
-.prenom { font-weight: 700; font-size: 19px; }
-.verifiee {
-  background: var(--accent); color: var(--prune); font-size: 10px; font-weight: 700;
-  padding: 3px 8px; border-radius: 999px;
-}
-.lieu { font-size: 13px; color: var(--texte-doux); margin-top: 3px; }
-.etiquettes { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; }
-.etiquettes span {
-  border: 1px solid var(--ligne-forte); color: var(--prune);
-  font-size: 11px; font-weight: 500; padding: 4px 10px; border-radius: 999px;
-}
-.gestes { display: flex; justify-content: center; gap: 18px; margin-top: 18px; }
-.gestes span { display: flex; align-items: center; justify-content: center; border-radius: 50%; }
-.gestes .nope { width: 46px; height: 46px; background: var(--fond); border: 1px solid var(--ligne-forte); }
-.gestes .like { width: 54px; height: 54px; background: linear-gradient(135deg, #8B2A8C, #C74FBE); }
 
 /* -------------------------------------------------------------- corps */
 
