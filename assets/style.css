@@ -187,7 +187,13 @@ body[data-etat="apres"] .avant { display: none; }
 .grille-securite p { margin: 0; }
 .grille-securite p span { color: rgba(251, 248, 251, .8); }
 
-.grille-etapes { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 24px; }
+/* la grille déborde du gabarit étroit : à 680 px, quatre captures de
+   téléphone tombent à 152 px et le texte de l'app ne se lit plus.
+   Le titre, lui, reste aligné sur les autres sections. */
+.grille-etapes {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 24px;
+  width: min(1040px, calc(100vw - 40px)); margin-left: 50%; transform: translateX(-50%);
+}
 .grille-etapes > div { display: flex; flex-direction: column; gap: 12px; }
 .capture {
   display: block; width: 100%; height: auto;
