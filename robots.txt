@@ -1,0 +1,5 @@
+# Kanuya — site vitrine
+User-agent: *
+Allow: /
+
+Sitemap: https://0xabdoulaye.github.io/kanuya/sitemap.xml

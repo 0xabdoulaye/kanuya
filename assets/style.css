@@ -1,0 +1,199 @@
+/* Kanuya — le site vitrine (design tour 2).
+ *
+ * Tout repose sur la typographie et le blanc. Le prune ne sert qu'au texte,
+ * aux filets, et à un seul bloc sombre : la sécurité, celle qui décide. Le
+ * dégradé de marque n'existe plus que sur un filet de 3 px en haut de page.
+ * Hiérarchie par la taille et l'espace, pas par les boîtes.
+ *
+ * La cible est un Android modeste en 3G : pas de framework, pas d'image en
+ * fond, deux familles de police. La première vue doit tenir sous 500 Ko.
+ */
+
+:root {
+  --prune: #4B164C;
+  --prune-clair: #8B2A8C;
+  --accent: #DD88CF;
+  --texte: #1E1420;
+  --doux: rgba(30, 20, 32, 0.65);
+  --pale: rgba(30, 20, 32, 0.4);
+  --filet: rgba(30, 20, 32, 0.07);
+  --bord: rgba(30, 20, 32, 0.12);
+  --fond-tres-pale: #FBF8FB;
+  --large: 34rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--texte);
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.filet { height: 3px; background: linear-gradient(90deg, #5E1D5F, #8B2A8C 55%, #C74FBE); }
+
+/* ---------------------------------------------------------------- tête */
+
+.tete {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 1rem; padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid var(--filet);
+  max-width: var(--large); margin: 0 auto;
+}
+.mot {
+  font-family: 'Lora', Georgia, serif; font-style: italic; font-weight: 600;
+  font-size: 1.31rem; color: var(--prune); text-decoration: none;
+}
+.lieu {
+  font-size: 0.69rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--pale);
+}
+
+main { max-width: var(--large); margin: 0 auto; }
+
+/* ------------------------------------------------------------- accueil */
+
+.accueil { padding: 2.75rem 1.75rem 2.5rem; }
+.accueil h1 {
+  margin: 0; font-size: 1.94rem; font-weight: 800; line-height: 1.18;
+  letter-spacing: -0.01em; text-wrap: pretty;
+}
+
+.boutons { margin-top: 1.75rem; display: flex; flex-direction: column; gap: 0.625rem; }
+
+.action {
+  display: flex; align-items: center; justify-content: center; gap: 0.56rem;
+  background: var(--prune); border-radius: 8px; padding: 0.94rem 0;
+  color: #fff; font-size: 0.91rem; font-weight: 600; text-decoration: none;
+}
+.action:active { opacity: 0.9; }
+
+/* « Bientôt » n'est pas un bouton : c'est un état. Rien ne clique dans le
+   vide, un badge qui mène à une erreur coûte plus cher que pas de badge. */
+.bientot {
+  margin: 0; display: flex; align-items: center; justify-content: space-between;
+  border: 1px solid var(--bord); border-radius: 8px; padding: 0.81rem 1rem;
+  font-size: 0.84rem; font-weight: 600; color: rgba(30, 20, 32, 0.45);
+}
+.etiquette {
+  font-size: 0.69rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: rgba(30, 20, 32, 0.35);
+}
+
+.capture { margin: 2.25rem 0 0; display: flex; flex-direction: column; align-items: center; gap: 0.625rem; }
+.capture .cadre {
+  width: 15.6rem; max-width: 100%; aspect-ratio: 5 / 6;
+  border: 1px solid var(--bord); border-radius: 16px; background: var(--fond-tres-pale);
+}
+.capture figcaption { font-size: 0.69rem; color: var(--pale); }
+
+/* --------------------------------------------------------------- blocs */
+
+.bloc { padding: 2.5rem 1.75rem; border-top: 1px solid var(--filet); }
+.chapeau {
+  margin: 0 0 1.375rem; font-size: 0.69rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--prune-clair);
+}
+.argument + .argument { margin-top: 1.375rem; }
+.argument h2 { margin: 0 0 0.375rem; font-size: 1.03rem; font-weight: 700; }
+.argument p { margin: 0; font-size: 0.875rem; line-height: 1.6; color: var(--doux); text-wrap: pretty; }
+.intro { margin: 0 0 0.875rem; font-size: 0.875rem; line-height: 1.6; color: rgba(30, 20, 32, 0.75); text-wrap: pretty; }
+
+/* le seul bloc sombre de la page */
+.sombre { padding: 2.5rem 1.75rem; background: var(--prune); }
+.sombre .chapeau { color: var(--accent); }
+.sombre .argument h2 { color: #fff; font-size: 0.97rem; }
+.sombre .argument p { color: rgba(255, 255, 255, 0.65); font-size: 0.84rem; }
+.sombre .argument + .argument { margin-top: 1.5rem; }
+
+/* -------------------------------------------------------------- étapes */
+
+.etapes { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 1.25rem; }
+.etapes li { display: flex; align-items: center; gap: 1rem; }
+.num {
+  flex: none; width: 1.125rem; font-size: 0.81rem; font-weight: 700;
+  color: rgba(30, 20, 32, 0.35); font-variant-numeric: tabular-nums;
+}
+.vignette {
+  flex: none; width: 5.5rem; aspect-ratio: 4 / 5;
+  border: 1px solid var(--bord); border-radius: 10px; background: var(--fond-tres-pale);
+}
+.etapes p { margin: 0; font-size: 0.875rem; line-height: 1.5; color: rgba(30, 20, 32, 0.75); }
+
+/* ------------------------------------------------------------- tableau */
+
+.tableau { margin: 0; }
+.tableau > div {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+  padding: 0.69rem 0; border-bottom: 1px solid var(--filet);
+}
+.tableau > div:last-child { border-bottom: 0; }
+.tableau dt { font-size: 0.875rem; color: rgba(30, 20, 32, 0.75); }
+.tableau dd { margin: 0; font-size: 0.875rem; font-weight: 700; text-align: right; }
+.appui { margin: 0.875rem 0 0; font-size: 0.875rem; font-weight: 700; color: var(--prune); }
+
+/* ----------------------------------------------------------------- FAQ */
+
+.faq details { border-bottom: 1px solid var(--filet); }
+.faq details:last-child { border-bottom: 0; }
+.faq summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.625rem;
+  padding: 0.875rem 0; font-size: 0.91rem; font-weight: 600;
+  cursor: pointer; list-style: none;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; font-size: 1rem; color: rgba(30, 20, 32, 0.35); flex: none; }
+.faq details[open] summary::after { content: '\2013'; }
+.faq details p { margin: 0 0 0.875rem; font-size: 0.84rem; line-height: 1.6; color: rgba(30, 20, 32, 0.6); }
+
+/* ------------------------------------------------------- pages légales */
+
+.legal { padding: 2.5rem 1.75rem 1rem; }
+.legal h1 { margin: 0; font-size: 1.63rem; font-weight: 800; line-height: 1.2; }
+.legal .maj { margin: 0.5rem 0 1.75rem; font-size: 0.81rem; color: var(--pale); }
+.legal h2 { margin: 2.25rem 0 0.625rem; font-size: 1.06rem; font-weight: 700; }
+.legal p { margin: 0 0 0.875rem; font-size: 0.94rem; line-height: 1.7; color: rgba(30, 20, 32, 0.78); text-wrap: pretty; }
+.legal .pied { margin-top: 2rem; font-size: 0.84rem; color: var(--pale); font-style: italic; }
+
+.sommaire { border: 1px solid var(--bord); border-radius: 8px; padding: 1.125rem 1.25rem; }
+.sommaire .chapeau { margin-bottom: 0.75rem; }
+.sommaire ol { margin: 0; padding-left: 1.25rem; }
+.sommaire li { margin-bottom: 0.44rem; font-size: 0.875rem; }
+.sommaire a { color: var(--prune-clair); text-decoration: none; }
+.sommaire a:hover { text-decoration: underline; }
+
+.resume { margin-top: 1.75rem; background: var(--fond-tres-pale); border-radius: 8px; padding: 1.25rem; }
+.resume dl { margin: 0; }
+.resume dt { font-size: 0.81rem; font-weight: 700; color: var(--prune); margin-top: 0.75rem; }
+.resume dt:first-child { margin-top: 0; }
+.resume dd { margin: 0.19rem 0 0; font-size: 0.875rem; line-height: 1.55; color: var(--doux); }
+
+/* ------------------------------------------------------------ pied de page */
+
+.bas {
+  max-width: var(--large); margin: 0 auto;
+  padding: 2.25rem 1.75rem 2.5rem; border-top: 1px solid var(--filet);
+}
+.bas p { margin: 0 0 1rem; font-size: 0.84rem; line-height: 1.65; color: var(--doux); text-wrap: pretty; }
+.bas i { font-family: 'Lora', Georgia, serif; color: var(--prune); }
+.bas nav { display: flex; flex-direction: column; gap: 0.56rem; }
+.bas nav a { font-size: 0.81rem; color: var(--prune-clair); text-decoration: none; }
+.bas nav a:hover { text-decoration: underline; }
+.bas .copy { margin: 1rem 0 0; font-size: 0.69rem; color: rgba(30, 20, 32, 0.35); }
+
+/* -------------------------------------------------------------- écrans larges */
+
+@media (min-width: 40rem) {
+  .accueil h1 { font-size: 2.5rem; }
+  .boutons { flex-direction: row; flex-wrap: wrap; }
+  .action { flex: 1 1 100%; }
+  .bientot { flex: 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
