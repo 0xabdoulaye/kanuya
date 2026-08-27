@@ -190,11 +190,15 @@ body[data-etat="apres"] .avant { display: none; }
 .grille-etapes { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 24px; }
 .grille-etapes > div { display: flex; flex-direction: column; gap: 12px; }
 .capture {
-  aspect-ratio: 9 / 16; border-radius: 20px;
-  background: repeating-linear-gradient(45deg, #EFE2EF 0 12px, #F7EEF7 12px 24px);
-  border: 1px solid #E7D8E7; display: flex; align-items: center; justify-content: center; padding: 8px;
+  display: block; width: 100%; height: auto;
+  aspect-ratio: 1080 / 2096; object-fit: cover;
+  border-radius: 20px; border: 1px solid #E7D8E7; background: #F7EEF7;
 }
-.capture span {
+.capture-vide {
+  background: repeating-linear-gradient(45deg, #EFE2EF 0 12px, #F7EEF7 12px 24px);
+  display: flex; align-items: center; justify-content: center; padding: 8px;
+}
+.capture-vide span {
   font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--prune-clair);
   background: rgba(251, 248, 251, .9); padding: 4px 8px; border-radius: 6px; text-align: center;
 }
