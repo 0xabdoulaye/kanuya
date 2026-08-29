@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Une invitation sur Kanuya</title>
+<meta name="description" content="Quelqu'un t'invite à rejoindre Kanuya, l'application de rencontre 100 % guinéenne.">
+
+<!-- La page vit sur GitHub Pages, donc statique : le code arrive en paramètre.
+     Un serveur dynamique donnerait un aperçu personnalisé au partage, mais
+     lierait chaque invitation à la disponibilité du VPS — et le site est
+     justement là pour survivre à ses pannes. -->
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Une invitation sur Kanuya">
+<meta property="og:description" content="Rejoins Kanuya, l'application de rencontre 100 % guinéenne. Vous gagnez 100 pièces chacun.">
+<meta property="og:image" content="https://kanuya.net/assets/og.jpg">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Lora:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 22px;
+    padding: 40px 24px;
+    background: linear-gradient(160deg, #5E1D5F 0%, #8B2A8C 55%, #C74FBE 100%);
+    color: #FBF8FB; font-family: Outfit, system-ui, -apple-system, sans-serif;
+    text-align: center;
+  }
+  .marque { font-family: Lora, Georgia, serif; font-style: italic; font-weight: 600;
+            font-size: clamp(34px, 11vw, 46px); margin: 0; }
+  .invite { font-size: clamp(17px, 4.6vw, 20px); line-height: 1.45; margin: 0; max-width: 22em; }
+  .invite b { font-weight: 700; }
+  .code {
+    font: 700 clamp(24px, 8vw, 32px)/1 ui-monospace, Menlo, monospace;
+    letter-spacing: .16em; padding: 14px 22px; border-radius: 16px;
+    border: 2px dashed rgba(251,248,251,.45); background: rgba(30,20,32,.2);
+  }
+  .aide { font-size: 13.5px; line-height: 1.5; color: rgba(251,248,251,.72); max-width: 24em; margin: 0; }
+  .actions { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 320px; }
+  .bouton {
+    text-decoration: none; background: #FBF8FB; color: #4B164C; font-weight: 700;
+    font-size: 16.5px; padding: 15px 24px; border-radius: 999px;
+    box-shadow: 0 4px 18px rgba(30,20,32,.25);
+  }
+  .lien { color: rgba(251,248,251,.8); font-size: 14px; text-decoration: underline; }
+  .pied { font-size: 12px; color: rgba(251,248,251,.5); margin: 6px 0 0; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+
+<h1 class="marque">Kanuya</h1>
+
+<p class="invite" id="invite">
+  Quelqu'un t'invite sur <b>Kanuya</b>,<br>l'application de rencontre 100 % guinéenne.
+</p>
+
+<div class="code" id="code" hidden></div>
+
+<p class="aide" id="aide" hidden>
+  Garde ce code : il te sera demandé à l'inscription.
+  Vous gagnerez <b>100 pièces</b> chacun.
+</p>
+
+<div class="actions">
+  <a class="bouton" href="https://kanuya.net/#telecharger">Découvrir Kanuya</a>
+  <a class="lien" href="https://kanuya.net/">Voir ce qu'est Kanuya</a>
+</div>
+
+<p class="pied">kanuya.net</p>
+
+<script>
+  // Le code arrive en paramètre. On ne l'écrit dans la page que s'il ressemble
+  // à un code : six caractères, lettres et chiffres. Sans cette garde, la page
+  // afficherait n'importe quoi qu'on lui passe.
+  var code = new URLSearchParams(location.search).get('c') || '';
+  code = code.trim().toUpperCase();
+
+  if (/^[A-Z0-9]{4,10}$/.test(code)) {
+    var el = document.getElementById('code');
+    el.textContent = code;
+    el.hidden = false;
+    document.getElementById('aide').hidden = false;
+    document.title = 'Invitation ' + code + ' · Kanuya';
+
+    // Si l'application est installée, Android l'ouvre directement sur ce lien
+    // et cette page ne s'affiche jamais. Sinon on garde le code de côté : la
+    // page de téléchargement le retrouvera.
+    try { localStorage.setItem('kanuya:parrain', code); } catch (e) {}
+  }
+</script>
+
+</body>
+</html>

@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://0xabdoulaye.github.io/kanuya/sitemap.xml
+Sitemap: https://kanuya.net/sitemap.xml

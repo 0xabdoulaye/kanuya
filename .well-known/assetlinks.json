@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kanuya.app",
+      "sha256_cert_fingerprints": [
+        "3C:10:EC:2D:30:C4:69:E8:FE:47:B0:09:5B:FB:E5:F9:60:F8:03:79:FD:89:64:3A:A6:4E:5D:DB:2D:DB:C0:98"
+      ]
+    }
+  }
+]
