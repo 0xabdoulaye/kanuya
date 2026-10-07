@@ -35,15 +35,14 @@
   /* Le téléchargement reste l'action principale ; WhatsApp l'accompagne en
      bouton compact, à côté, sans lui voler la vedette. */
   .ligne-dl{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap}
-  .ligne-dl .bouton-clair{flex:1 1 180px;font-size:15px;padding:15px 18px}
+  .ligne-dl .bouton-clair{flex:1 1 180px;font-size:15px;padding:15px 18px;white-space:nowrap}
   .bouton-wa{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:8px;
     padding:0 18px;background:#25D366;color:#fff;border-radius:999px;text-decoration:none;
     font:700 14px/1 Outfit,system-ui,sans-serif;
     box-shadow:0 4px 18px rgba(30,20,32,.25)}
   .bouton-wa:hover{background:#1FB457}
   .bouton-wa:active{transform:translateY(1px)}
-  .bientot .badge{flex:1;justify-content:center;gap:9px;padding:9px 10px}
-  .bientot .badge .pile b{font-size:14px}
+  .apk-sous a{color:inherit;text-decoration:underline;text-underline-offset:2px}
   .apk-sous{font-size:12px;color:rgba(251,248,251,.6);text-align:center;margin:0}
 </style>
 <script type="application/ld+json">
@@ -139,7 +138,12 @@
     <div id="telecharger" class="telecharger">
         <div class="avant">
           <div class="ligne-dl">
-            <a class="bouton-clair" href="kanuya.apk" download>Télécharger l'application (Android)</a>
+            <a class="bouton-clair" href="https://play.google.com/store/apps/details?id=com.kanuya.app" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:-4px;margin-right:8px">
+                <path d="M3.6 1.9 13.5 12 3.6 22.1c-.37-.3-.6-.77-.6-1.32V3.22c0-.55.23-1.02.6-1.32z" fill="#4285F4"/>
+                <path d="M17 8.6 5.3 1.6c-.55-.33-1.2-.27-1.7.3L13.5 12 17 8.6z" fill="#34A853"/>
+                <path d="M17 15.4 20.5 13.3c.9-.54.9-2.06 0-2.6L17 8.6 13.5 12l3.5 3.4z" fill="#FBBC04"/>
+                <path d="M3.6 22.1c.5.57 1.15.63 1.7.3L17 15.4 13.5 12 3.6 22.1z" fill="#EA4335"/>
+              </svg>Télécharger sur Google Play</a>
             <a class="bouton-wa" href="https://www.whatsapp.com/channel/0029VbEC2LfKGGG8GvnuOy3C"
                target="_blank" rel="noopener"
                title="Mises à jour de Kanuya sur WhatsApp" aria-label="Mises à jour de Kanuya sur WhatsApp">
@@ -147,17 +151,8 @@
               <span>WhatsApp</span>
             </a>
           </div>
-          <p class="apk-sous">Fichier APK de 36 Mo, sans passer par le Play Store · mises à jour sur WhatsApp</p>
+          <p class="apk-sous">Pas de Play Store ? <a href="kanuya.apk" download>Télécharger l'APK</a> (36 Mo) · mises à jour sur WhatsApp</p>
           <div class="bientot">
-            <a class="badge" href="https://play.google.com/store/apps/details?id=com.kanuya.app" target="_blank" rel="noopener">
-              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M3.6 1.9 13.5 12 3.6 22.1c-.37-.3-.6-.77-.6-1.32V3.22c0-.55.23-1.02.6-1.32z" fill="#4285F4"/>
-                <path d="M17 8.6 5.3 1.6c-.55-.33-1.2-.27-1.7.3L13.5 12 17 8.6z" fill="#34A853"/>
-                <path d="M17 15.4 20.5 13.3c.9-.54.9-2.06 0-2.6L17 8.6 13.5 12l3.5 3.4z" fill="#FBBC04"/>
-                <path d="M3.6 22.1c.5.57 1.15.63 1.7.3L17 15.4 13.5 12 3.6 22.1z" fill="#EA4335"/>
-              </svg>
-              <span class="pile"><small>DISPONIBLE SUR</small><b>Google Play</b></span>
-            </a>
             <span class="store">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="rgba(251,248,251,0.6)" aria-hidden="true">
                 <path d="M17.05 12.54c-.03-2.87 2.35-4.25 2.45-4.32-1.34-1.95-3.41-2.22-4.14-2.25-1.76-.18-3.44 1.04-4.33 1.04-.89 0-2.27-1.02-3.74-.99-1.92.03-3.7 1.12-4.69 2.84-2 3.47-.51 8.6 1.44 11.42.95 1.38 2.08 2.93 3.57 2.87 1.43-.06 1.97-.92 3.7-.92s2.22.92 3.73.89c1.54-.03 2.52-1.4 3.46-2.79 1.09-1.6 1.54-3.15 1.56-3.23-.03-.01-2.99-1.15-3.01-4.56z"/>
