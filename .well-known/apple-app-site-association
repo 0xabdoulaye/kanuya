@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["X5NT87N382.net.kanuya.app"],
+        "components": [{ "/": "/i/*", "comment": "Liens d'invitation : ils ouvrent l'app sur iPhone" }]
+      }
+    ]
+  }
+}
