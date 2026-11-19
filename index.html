@@ -46,6 +46,14 @@
     box-shadow:0 4px 18px rgba(30,20,32,.25)}
   .bouton-wa:hover{background:#1FB457}
   .bouton-wa:active{transform:translateY(1px)}
+  /* La version Android du site, quand le Play Store a du retard. */
+  .bouton-apk{display:flex;align-items:center;justify-content:center;gap:10px;
+    padding:12px 18px;background:var(--or);color:var(--prune);border-radius:999px;text-decoration:none;
+    font-family:Outfit,system-ui,sans-serif;box-shadow:0 4px 18px rgba(30,20,32,.25)}
+  .bouton-apk .pile{text-align:left;line-height:1.15}
+  .bouton-apk .pile b{display:block;font-size:15px;font-weight:700}
+  .bouton-apk .pile small{display:block;font-size:11px;font-weight:600;opacity:.8}
+  .bouton-apk:active{transform:translateY(1px)}
 </style>
 <script type="application/ld+json">
 {
@@ -151,6 +159,11 @@
                 <path d="M14.22 4.1c.79-.95 1.32-2.28 1.17-3.6-1.13.05-2.5.76-3.31 1.71-.73.84-1.37 2.19-1.2 3.48 1.26.1 2.55-.64 3.34-1.59z"/>
               </svg><span class="pile"><small>Télécharger sur</small><b>App Store</b></span></a>
           </div>
+          <a class="bouton-apk" href="kanuya.apk" download="Kanuya-1.5.0.apk">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            <span class="pile"><b>La nouvelle version de Kanuya</b><small>Android · 1.5.0 · 37 Mo</small></span>
+          </a>
           <a class="bouton-wa" href="https://www.whatsapp.com/channel/0029VbEC2LfKGGG8GvnuOy3C"
                target="_blank" rel="noopener"
                title="Mises à jour de Kanuya sur WhatsApp" aria-label="Mises à jour de Kanuya sur WhatsApp">
